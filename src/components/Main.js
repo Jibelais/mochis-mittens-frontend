@@ -1,9 +1,11 @@
 import {Routes, Route} from "react-router-dom"
 import { useEffect, useState} from "react"
 import Products from "../pages/Products"
+import Show from "../pages/Show"
 import Add from "../pages/Add"
+import Edit from "../pages/Edit"
 import {db} from "../firebase_config"
-import {collection, getDocs, addDoc, updateDoc, doc} from 'firebase/firestore'
+import {collection, getDocs, addDoc, updateDoc, doc, deleteDoc} from 'firebase/firestore'
 
 
 function Main(props){
@@ -14,10 +16,15 @@ function Main(props){
         await addDoc(productsCollectionRef, product)
     }
     
-    const editProduct = async (id, editedProduct) => {
-        const productDoc = doc(db, "products", id)
-        await updateDoc(productDoc, updateDoc)
+    const updateProduct = async (product, id) => {
+        const docRef = doc(db, "products", id)
+        await updateDoc(docRef, product)
 
+    }
+
+    const deleteProduct = async (id) => {
+        const docRef = doc(db, "products", id)
+        await deleteDoc(docRef)
     }
 
 
@@ -36,7 +43,9 @@ function Main(props){
         <main>
             <Routes>
                 <Route exact path = '/products' element = {<Products products = {products}/>}/>
+                <Route exact path = '/products/:id' element = {<Show products = {products}/>}/>
                 <Route exact path = '/products/add' element = {<Add products = {products} createProduct = {createProduct}/>}/>
+                <Route exact path = '/products/:id/edit' element = {<Edit products = {products} updateProduct = {updateProduct} deleteProduct = {deleteProduct}/>}/>
             </Routes>
         </main>
     )
