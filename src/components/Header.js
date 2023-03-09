@@ -1,7 +1,10 @@
 
 function Header () {
     return (
-    <div>Header</div>
+    <header>
+        <h1>Mochi's Mittens</h1>
+    </header>
+    
     )
 }
 
