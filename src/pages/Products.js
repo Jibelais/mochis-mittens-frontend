@@ -20,10 +20,12 @@ function Products(props){
     const render = ()=> {
         return selected.map((product)=>(
             <div key = {product.id}>
+                <Link to={`/products/${product.id}`}>
                 <div>
                     <img src={product.img} alt="img"/>
                     {/* <p>{product.name}</p> */}
-                </div>   
+                </div>
+                </Link>   
             </div>
         ))
 
@@ -50,10 +52,10 @@ function Products(props){
 
     return (
         <div>
-             <button onClick = {()=>handleClick("tower")} >Cat Towers</button>
-             <button onClick = {()=>handleClick("clothing")} >Clothings</button>
-             <button onClick = {()=>handleClick("toy")} >Toys</button>
-             <button onClick = {displayAll} >ALL</button>
+             <button className= 'button' onClick = {()=>handleClick("tower")} >Cat Towers</button>
+             <button className= 'button' onClick = {()=>handleClick("clothing")} >Clothings</button>
+             <button className= 'button' onClick = {()=>handleClick("toy")} >Toys</button>
+             <button className= 'button' onClick = {displayAll} >ALL</button>
         
             {/* <div className = "product-container" >
                 {props.products ? loaded() : loading()}

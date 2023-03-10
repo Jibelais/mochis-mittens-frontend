@@ -31,10 +31,14 @@ function Edit(props){
 
     return(
         <section>
-            <form onSubmit = {handleSubmit}>
-                
+            <form  className = 'product-container'onSubmit = {handleSubmit}>
                 <div>
-                    Category:<input
+                    <img className = 'show-image'src={product.img} alt={product.name} /><br/>
+                </div>
+                <div>
+                <div>
+                <label>Category</label><input 
+                        className='input'
                         type = "text"
                         value = {editForm.category}
                         name = "category"
@@ -42,32 +46,47 @@ function Edit(props){
                         onChange = {handleChange}
                     />
                 </div>
-                <input
+                <div>
+                    <label>Image</label><input
+                    className='input'
                     type = "text"
                     value = {editForm.img}
                     name = "img"
                     placeholder='img'
                     onChange = {handleChange}
                 />
-                <input
+                </div>
+                <div>
+                  <label>Link</label><input
+                    className='input'
                     type = "text"
                     value = {editForm.link}
                     name = "link"
                     placeholder='link'
                     onChange = {handleChange}
-                />
-                <input
+                />  
+                </div>
+                 <div>
+                    <label>Name</label><input
+                    className='input'
                     type = "text"
                     value = {editForm.name}
                     name = "name"
                     placeholder='name'
                     onChange = {handleChange}
                 />
-                <input id="add-button" className='input button' type="submit" value="Update" />
-                <button id="delete-button" className="input button" onClick = {()=>removeProduct(product.id)}>Delete</button>
-
+                 </div>
+                 
+                <div>
+                    <input id="add-button" className='input button' type="submit" value="Update" />
+                    <button id="delete-button" className="input button" onClick = {()=>removeProduct(product.id)}>Delete</button>
+                    </div>
+                </div>
+                
             </form>
+            <img id="background-img" src='/img/bottem.png' alt="background" /><br/>
         </section>
+        
     )
 }
 

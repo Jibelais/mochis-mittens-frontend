@@ -34,36 +34,51 @@ const handleSubmit = (event) => {
     return (  
         <section>
             <form onSubmit = {handleSubmit}>
-                <input
+                <div>
+                    <input
+                    className ='input'
                     type = "text"
                     value = {newProduct.category}
                     name = "category"
                     placeholder='category'
                     onChange = {handleChange}
                 />
-                <input
+                </div>
+                <div>
+                    <input
+                    className ='input'
                     type = "text"
                     value = {newProduct.img}
                     name = "img"
                     placeholder='img'
                     onChange = {handleChange}
-                />
-                <input
+                    />
+                </div>
+              
+                <div>
+                    <input
+                    className ='input'
                     type = "text"
                     value = {newProduct.link}
                     name = "link"
                     placeholder='link'
                     onChange = {handleChange}
                 />
-                <input
+                </div>
+                <div>
+                    <input
+                    className ='input'
                     type = "text"
                     value = {newProduct.name}
                     name = "name"
                     placeholder='name'
                     onChange = {handleChange}
                 />
-                <input id="add-button" className='input button' type="submit" value="Add" />
+                </div>
+                
+                <input className='input button' type="submit" value="Add" />
             </form>
+            <img id="background-img" src='/img/bottem.png' alt="background" /><br/>
         </section>
     );
 }

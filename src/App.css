@@ -1,32 +1,87 @@
-*{
-  background-color: white;
+
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Jost:wght@500&family=Rampart+One&family=Amatic+SC:wght@700&family=Arimo&family=Barlow&family=Hind&family=Homemade+Apple&family=Montserrat:wght@600&family=Nunito+Sans:ital,wght@0,300;1,300&family=Nunito:wght@300&family=Overpass:wght@100;300;400&family=Roboto:wght@500&family=Walter+Turncoat&display=swap');
+
+body{
+  background-color:#f4dee5;
 }
+
 .App {
-  background-color: white;
+  /* background-color: white; */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 header {
+  background-color: #f3a6ad ;
   width: 100vw;
   height: 20vh;
-  border: 1px solid lightgrey;
+}
+.title{
+  font-size: 70px;
+  color:white;
+  font-family: 'Rampart One', cursive;
+  /* font-family: 'Amatic SC', cursive; */
 }
 .product-container{
+  font-family: 'Jost', sans-serif;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 50px;
   
 }
 
 
-
+nav, nav>a, nav>a:link, nav>a:visited{
+  margin: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  gap: 130px;
+  color: white;
+}
+.input{
+  padding: 10px;
+  margin: 10px;
+  width: 500px;
+  border-radius: 5px;
+  border: none;
+}
+.button{
+  /* margin-left: 160px; */
+  background-color: #f0bead;
+  border: none;
+  height: 80px;
+  width: 80px;
+  border-radius: 100px;
+ }
+ label{
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
 img {
-  width: 300px;
+  width: 250px;
+  border: 20px solid white;
+}
+.show-image{
+  width: 400px;
+}
+.show-detail{
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+}
+
+#background-img{
+  border:none;
+  width: 60vh;
+  position: fixed;
+  bottom: 0px;
 }
 
 a, a:visited, a:link{
@@ -35,9 +90,9 @@ a, a:visited, a:link{
 }
 
 button{
-  width: 100px;
-  height: 50px;
-  border: 1px solid lightgrey;
+  background-color: #f0bead;
+  color: white;
+  border: 0;
   margin: 10px;
 
 }

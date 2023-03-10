@@ -37,16 +37,16 @@ function Main(props){
     getProducts()
 
     }, [])
-    console.log(products)
 
     return(
-        <main>
+        <main className = 'main-content'>
             <Routes>
                 <Route exact path = '/products' element = {<Products products = {products}/>}/>
                 <Route exact path = '/products/:id' element = {<Show products = {products}/>}/>
                 <Route exact path = '/products/add' element = {<Add products = {products} createProduct = {createProduct}/>}/>
                 <Route exact path = '/products/:id/edit' element = {<Edit products = {products} updateProduct = {updateProduct} deleteProduct = {deleteProduct}/>}/>
             </Routes>
+            
         </main>
     )
 }
