@@ -1,6 +1,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Jost:wght@500&family=Rampart+One&family=Amatic+SC:wght@700&family=Arimo&family=Barlow&family=Hind&family=Homemade+Apple&family=Montserrat:wght@600&family=Nunito+Sans:ital,wght@0,300;1,300&family=Nunito:wght@300&family=Overpass:wght@100;300;400&family=Roboto:wght@500&family=Walter+Turncoat&display=swap');
 
+/* @font-face{
+  font-family: 'Overpass';
+  src: local('Overpass'), url('Overpass.ttf') format('truetype')
+} */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.home, .reports, .products{
+  display: flex; 
+  height: 90vh; 
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
 body{
   background-color:#f4dee5;
 }
@@ -96,3 +113,56 @@ button{
   margin: 10px;
 
 }
+
+/* Landing Page */
+
+.title-text{
+  /* margin-top: 5rem; */
+  font-size: 25em;
+  color:red;
+  overflow: hidden;
+  /* margin-left: 115px; */
+  font-family: 'Overpass';
+
+}
+
+.title-text .letter{
+  display: inline-block;
+  line-height: 2em;
+  opacity: 0;
+}
+
+/* .scrolldown{
+  font-size: 15px;
+  letter-spacing: 3px;
+  position: absolute;
+  color:black;
+  bottom: 100px;
+  left: 80px;
+  transform: rotate(-90deg);
+} */
+
+.scrolldown::before{
+  content: '';
+  border: 2px solid; 
+  width: 50px; 
+  margin: 0 20px 0 0 ;
+  transform: translateY(-2px);
+  opacity: .5;
+  display: inline-block;
+}
+
+.m {
+  color: #f3a6ad
+}
+.e {
+  color: #fde7ab
+}
+.o {
+  color:  #a7c9cf
+}
+.w{
+  color: #e6c5f5
+}
+
+

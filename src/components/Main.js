@@ -1,5 +1,6 @@
 import {Routes, Route} from "react-router-dom"
 import { useEffect, useState} from "react"
+import Home from "../pages/Home"
 import Products from "../pages/Products"
 import Show from "../pages/Show"
 import Add from "../pages/Add"
@@ -41,6 +42,7 @@ function Main(props){
     return(
         <main className = 'main-content'>
             <Routes>
+                <Route exact path = '/' element = {<Home/>}/>
                 <Route exact path = '/products' element = {<Products products = {products}/>}/>
                 <Route exact path = '/products/:id' element = {<Show products = {products}/>}/>
                 <Route exact path = '/products/add' element = {<Add products = {products} createProduct = {createProduct}/>}/>
