@@ -1,7 +1,6 @@
 import React from 'react'
 import  { useRef, useEffect } from "react"
 import anime from "animejs";
-import TweenMax from 'gsap'
 
 
 export const Home = () => {
@@ -13,44 +12,35 @@ const titleRef = useRef(null);
       .timeline()
       .add({
         targets: ".title-text .letter",
-        translateY: [200, 0],
+        translateY: [200, -100],
         easing: "easeOutExpo",
         opacity: 1,
-        duration: 1700,
-        delay: (el, i) => 400 + 70 * i,
+        duration: 2000,
+        delay: (el, i) => 500 + 70 * i,
       })
-      .add({
-        // add more animations to the timeline if necessary
-      });
+     
   }, []);
-    TweenMax.from(".scrolldown", 1.5, {
-        delay: 0.7, 
-        opacity:1,
-        translateY: 200, 
-        easing:"easeOutExpo"
-    })
-    
+
   return (
     <div>
+        <img className='home-image'src='/img/home.png'></img>
         <h1 ref={titleRef} className="title-text">
             <span className="letter m">m</span>
             <span className="letter e">e</span>
             <span className="letter o">o</span>
             <span className="letter w">w</span>
+            <span className="letter dot">...</span>
         </h1>
-        {/* <div className = "scrolldown">scroll down</div> */}
+
+        <div className='animate'>
+            <p>Hi I am Mochi.</p>
+            {/* <p>I am very picky like my mommy.</p> */}
+            <p>check out my favorite picks!</p>
+        </div>
     </div>
     
   )
 }
 
-// anime.timeline().add({
-//     targets: ".title .letter", 
-//     translateY:[200,0], 
-//     easing: "easeOutExpo", 
-//     opacity:1, 
-//     duration: 1700, 
-//     delay:(el, i) => 400 + 70 * i, 
 
-// })
 export default Home

@@ -1,10 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Jost:wght@500&family=Rampart+One&family=Amatic+SC:wght@700&family=Arimo&family=Barlow&family=Hind&family=Homemade+Apple&family=Montserrat:wght@600&family=Nunito+Sans:ital,wght@0,300;1,300&family=Nunito:wght@300&family=Overpass:wght@100;300;400&family=Roboto:wght@500&family=Walter+Turncoat&display=swap');
 
-/* @font-face{
-  font-family: 'Overpass';
-  src: local('Overpass'), url('Overpass.ttf') format('truetype')
-} */
 *{
   box-sizing: border-box;
   margin: 0;
@@ -19,7 +15,7 @@
 }
 
 body{
-  background-color:#f4dee5;
+  background-color:#ffffff;
 }
 
 .App {
@@ -29,9 +25,9 @@ body{
 
 
 header {
-  background-color: #f3a6ad ;
+  background-color: #fdfdfd ;
   width: 100vw;
-  height: 20vh;
+  height: 5vh;
 }
 .title{
   font-size: 70px;
@@ -68,11 +64,12 @@ nav, nav>a, nav>a:link, nav>a:visited{
 }
 .button{
   /* margin-left: 160px; */
-  background-color: #f0bead;
-  border: none;
-  height: 80px;
-  width: 80px;
-  border-radius: 100px;
+  border: 1px solid lightgrey;
+  background-color: white;
+  color: grey;
+  height: 50px;
+  width: 100px;
+ 
  }
  label{
   display: inline-block;
@@ -114,55 +111,56 @@ button{
 
 }
 
+.home-image{
+  width: 100vw;
+
+}
+
 /* Landing Page */
 
 .title-text{
   /* margin-top: 5rem; */
-  font-size: 25em;
-  color:red;
+  font-size: 10em;
   overflow: hidden;
-  /* margin-left: 115px; */
+  margin-left: 115px;
   font-family: 'Overpass';
+  color: black;
+  position: absolute;
+  top: 300px;
+  right: 100px;
 
 }
 
-.title-text .letter{
+.letter{
   display: inline-block;
   line-height: 2em;
   opacity: 0;
 }
 
-/* .scrolldown{
-  font-size: 15px;
-  letter-spacing: 3px;
+.dot{
+  font-size: 0.5em;
+}
+
+/* text animation */
+.animate {
+  font-family: "Overpass";
+  text-align: left;
   position: absolute;
-  color:black;
-  bottom: 100px;
-  left: 80px;
-  transform: rotate(-90deg);
-} */
-
-.scrolldown::before{
-  content: '';
-  border: 2px solid; 
-  width: 50px; 
-  margin: 0 20px 0 0 ;
-  transform: translateY(-2px);
-  opacity: .5;
-  display: inline-block;
+  line-height: 30px;
+  font-size: 20px;
+  top: 500px;
+  right: 350px;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 7s
+}
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
 }
 
-.m {
-  color: #f3a6ad
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
 }
-.e {
-  color: #fde7ab
-}
-.o {
-  color:  #a7c9cf
-}
-.w{
-  color: #e6c5f5
-}
-
-
