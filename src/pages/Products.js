@@ -51,11 +51,14 @@ function Products(props){
       }
 
     return (
-        <div>
-             <button className= 'button' onClick = {()=>handleClick("tower")} >Cat Towers</button>
-             <button className= 'button' onClick = {()=>handleClick("clothing")} >Clothings</button>
-             <button className= 'button' onClick = {()=>handleClick("toy")} >Toys</button>
-             <button className= 'button' onClick = {displayAll} >ALL</button>
+        <main>
+             <button className= 'category-button' onClick = {()=>handleClick("tower")} >Cat Towers</button>
+             <button className= 'category-button' onClick = {()=>handleClick("clothing")} >Clothings</button>
+             <button className= 'category-button' onClick = {()=>handleClick("toy")} >Toys</button>
+             <button className= 'category-button' onClick = {()=>handleClick("litter")} >Litter Boxes</button>
+             <button className= 'category-button' onClick = {()=>handleClick("accessories")} >Accessories</button>
+             <button className= 'category-button' onClick = {()=>handleClick("bed")} >Beds</button>
+             <button className= 'category-button' onClick = {displayAll} >ALL</button>
         
             {/* <div className = "product-container" >
                 {props.products ? loaded() : loading()}
@@ -64,7 +67,7 @@ function Products(props){
                 {isClicked ? render(): loaded()}
             </div>
                
-        </div>
+        </main>
         
     )
 }

@@ -7,25 +7,25 @@ import { RiAdminLine} from "react-icons/ri";
 import {HiOutlineBookOpen} from 'react-icons/hi'
 export const SidebarData = [
    {
-    title: 'Home', 
+    title: 'HOME', 
     path: '/', 
     icon: <AiIcons.AiFillHome />, 
     className: 'nav-text'
    }, 
    {
-    title: 'Products', 
+    title: 'PRODUCTS', 
     path: '/products', 
     icon: <GiIcons.GiHollowCat />, 
     className: 'nav-text'
    }, 
    {
-    title: 'Add', 
+    title: 'ADD', 
     path: '/products/add', 
     icon: <RiAdminLine />, 
     className: 'nav-text'
    }, 
    {
-    title: 'Resources', 
+    title: 'RESOURCES', 
     path: '/resources', 
     icon: <HiOutlineBookOpen />, 
     className: 'nav-text'

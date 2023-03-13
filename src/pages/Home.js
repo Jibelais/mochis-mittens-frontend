@@ -33,9 +33,9 @@ const titleRef = useRef(null);
         </h1>
 
         <div className='animate'>
-            <p>Hi I am Mochi.</p>
+            <p>Hi I am Mochi, check out my picks!</p>
             {/* <p>I am very picky like my mommy.</p> */}
-            <p>check out my favorite picks!</p>
+            
         </div>
     </div>
     

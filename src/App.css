@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
 }
 .home, .reports, .products{
   display: flex; 
@@ -15,7 +16,7 @@
 }
 
 body{
-  background-color:#ffffff;
+  background-color: rgb(255, 255, 255);
 }
 
 .App {
@@ -27,12 +28,19 @@ body{
 header {
   background-color: #fdfdfd ;
   width: 100vw;
-  height: 5vh;
+  height: 10vh;
+  gap: 30%;
+  margin: 30px;
+  
+}
+
+main{
+
 }
 .title{
-  font-size: 70px;
-  color:white;
-  font-family: 'Rampart One', cursive;
+  font-size: 40px;
+  color:black;
+  font-family: 'Overpass'
   /* font-family: 'Amatic SC', cursive; */
 }
 .product-container{
@@ -69,7 +77,13 @@ nav, nav>a, nav>a:link, nav>a:visited{
   color: grey;
   height: 50px;
   width: 100px;
+ }
+ .category-button{
+  background-color: white;
+  color: grey;
+  height: 50px;
  
+  text-transform: uppercase;
  }
  label{
   display: inline-block;
@@ -79,6 +93,7 @@ nav, nav>a, nav>a:link, nav>a:visited{
 img {
   width: 250px;
   border: 20px solid white;
+  box-shadow:rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .show-image{
   width: 400px;
@@ -136,7 +151,9 @@ button{
   line-height: 2em;
   opacity: 0;
 }
-
+.e{
+  color: rgb(255, 55, 0);
+}
 .dot{
   font-size: 0.5em;
 }
