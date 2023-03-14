@@ -30,13 +30,13 @@ function Edit(props){
     }
 
     return(
-        <section className='bottom-margin'>
-            <form  className = 'product-container'onSubmit = {handleSubmit}>
+        <section className='bottom-margin product-page'>
+            <form  className = 'edit-container'onSubmit = {handleSubmit}>
                 <div>
                     <img className = 'show-image'src={product.img} alt={product.name} /><br/>
                 </div>
                 <div>
-                <div>
+                <div className='edit-content'>
                 <label>Category</label><input 
                         className='input'
                         type = "text"
@@ -46,7 +46,7 @@ function Edit(props){
                         onChange = {handleChange}
                     />
                 </div>
-                <div>
+                <div className='edit-content'>
                     <label>Image</label><input
                     className='input'
                     type = "text"
@@ -56,7 +56,7 @@ function Edit(props){
                     onChange = {handleChange}
                 />
                 </div>
-                <div>
+                <div className='edit-content'>
                   <label>Link</label><input
                     className='input'
                     type = "text"
@@ -66,7 +66,7 @@ function Edit(props){
                     onChange = {handleChange}
                 />  
                 </div>
-                 <div>
+                 <div className='edit-content'>
                     <label>Name</label><input
                     className='input'
                     type = "text"

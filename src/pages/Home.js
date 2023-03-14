@@ -22,7 +22,7 @@ const titleRef = useRef(null);
   }, []);
 
   return (
-    <main className='bottom-margin'>
+    <main className='bottom-margin1'>
         <img className='home-image'src='/img/home.png'></img>
         <h1 ref={titleRef} className="title-text">
             <span className="letter m">m</span>

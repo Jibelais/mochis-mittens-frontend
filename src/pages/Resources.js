@@ -45,45 +45,63 @@ export const Resources = () => {
    
    const iconGenerate = (num) =>{
     const icons = []
-    for (let i = 0; i<breed.breeds[0].affection_level; i++){
+    for (let i = 0; i<num; i++){
       icons.push(<i key={i}><GiIcons.GiPlainCircle/></i>)
     }
     return icons
    }
    const display = () =>{
     return (
-      <div>
-         <h5>{breed.breeds[0].name}</h5>
-         <p>{breed.breeds[0].description}</p>
-         <label>Affection Level:</label>
-         <p className='rating'>{iconGenerate(breed.breeds[0].affection_level)}</p>
-         <p>{breed.breeds[0].shedding_leve}</p>
-         <p>{breed.breeds[0].child_friendly}</p>
-         
-
-     </div>
+      <dv>
+        <p className='description'>{breed.breeds[0].description}</p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Affection Level</td>
+              <td>{iconGenerate(breed.breeds[0].affection_level)}</td>
+            </tr>
+            <tr>
+              <td>Shedding Level</td>
+              <td>{iconGenerate(breed.breeds[0].shedding_level)}</td>
+            </tr>
+            <tr>
+              <td>Child Friendly</td>
+              <td>{iconGenerate(breed.breeds[0].child_friendly)}</td>
+            </tr>
+            <tr>
+              <td>Energy Level</td>
+              <td>{iconGenerate(breed.breeds[0].energy_level)}</td>
+            </tr>
+          </tbody>
+        </table>
+      </dv>
+        
       )    
     }
   return (
-    <main className='add-container bottom-margin'>
-        
-       <form className='form-container'onSubmit={handleSearch}>
-        <input
-          type="text"
-          placeholder="Enter any cat breed"
-          value={form}
-          onChange={handleChange}
-        />
-        <button className='button' onClick = {handleSearch} >Search</button>
-      </form>
 
-      <div>
-        <img className= 'show-image'src={breed.url} alt={breed.name}></img>
-        {breed ? display() : " "}
-      </div>
-      
-
-    </main>
+    <section className='resource-container'>
+      <main className='add-container bottom-margin border'>
+          <p className='resource-text'>Every cat has different personality and physical traits.  Knowing your cat defintely helps you to choose
+          right products.  Search any breed you are curious about! 
+          </p>
+          <form className='form-container'onSubmit={handleSearch}>
+          <input
+            id='search'
+            type="text"
+            placeholder="Enter any cat breed"
+            value={form}
+            onChange={handleChange}
+          />
+          <button className='button' onClick = {handleSearch} >Search</button>
+        </form>
+        <div>
+          <img className= 'show-image'src={breed.url} alt={breed.name}></img>
+          {breed ? display() : <img id='resource-img'src='/img/resource.png' alt='pic'/>}
+        </div>
+      </main>
+    </section>
+ 
    
   )
 }

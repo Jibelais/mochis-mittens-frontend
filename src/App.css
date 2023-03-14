@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Overpass";
 
 }
 
@@ -31,7 +32,7 @@ background-color:#ffffff;
 header {
   background-color:#ffffff;
   width: 100vw;
-  height: 10vh;
+  height: 7vh;
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -43,7 +44,7 @@ main{
 }
 
 .bottom-margin{
-  margin-bottom:700px;
+  margin-bottom:600px;
 }
 .title{
   font-size: 35px;
@@ -58,14 +59,12 @@ main{
 
 }
 .product-container{
-  font-family: 'Jost', sans-serif;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 20px;
   width: 1000px;
-  
 }
 .show-container{
   display: flex;
@@ -77,29 +76,35 @@ main{
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  margin-top: 50px;
+}
 
+.edit-container{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+}
+
+.edit-content{
+  display: flex;
+  flex-direction:  column;
 }
 .form-container{
   width: 700px;
 }
-nav, nav>a, nav>a:link, nav>a:visited{
-  margin: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 500;
-  display: flex;
+.resource-container{
+  display:flex;
   justify-content: center;
-  gap: 130px;
-  /* color: white;*/
-} 
-.input{
-  padding: 10px;
-  margin: 10px;
-  width: 500px;
-  border-radius: 5px;
-  border: none;
 }
+.border{
+  width: 900px;
+  padding: 30px;
+}
+
 .button{
-  /* margin-left: 160px; */
+  
   border: 1px solid lightgrey;
   background-color: #ffffff;
   color: grey;
@@ -118,8 +123,8 @@ nav, nav>a, nav>a:link, nav>a:visited{
  }
  label{
   display: inline-block;
-  width: 150px;
-  text-align: right;
+  width: 500px;
+  text-align: left;
 }
 .product-img {
   width: 300px;
@@ -137,7 +142,6 @@ nav, nav>a, nav>a:link, nav>a:visited{
   gap: 30px;
 
 }
-
 a, a:visited, a:link{
   text-decoration: none;
   color: black
@@ -150,12 +154,34 @@ button{
 }
 .rating{
 color: black;
+display: flex;
+gap: 30px;
+justify-content: center;
+align-items: flex-end;
 }
 .home-image{
   width: 100vw;
-
+  padding-bottom: 150px;
 }
-
+.description{
+  width: 500px;
+  text-align: left;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid lightgrey;
+}
+.resource-text{
+  width: 500px;
+  text-align: left;
+}
+#resource-img{
+  width: 550px;
+  border: 20px solid white;
+  box-shadow:rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+#search{
+  width: 300px;
+}
 /* Landing Page */
 
 .title-text{
@@ -168,7 +194,6 @@ color: black;
   position: absolute;
   top: 300px;
   right: 100px;
-
 }
 
 .letter{
