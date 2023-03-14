@@ -8,3 +8,7 @@ This app introduces modern cat products
 ## Wireframe 
 
 ![](public/img/wireframe.png)
+
+## Diagram 
+
+![](public/img/diagram.png)

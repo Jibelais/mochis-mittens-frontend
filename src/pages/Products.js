@@ -1,9 +1,11 @@
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import {useState} from "react"
+
 
 function Products(props){
     const [isClicked, setIsClicked] = useState(false)
     const [selected, setSelected] = useState([]) 
+    let navigate = useNavigate()
 
     const handleClick = (category) =>{
         let selection = props.products.filter((product) => {
@@ -15,6 +17,7 @@ function Products(props){
 
     function displayAll () {
         window.location.reload()
+        
     }
 
     const render = ()=> {
@@ -64,7 +67,8 @@ function Products(props){
             </div>
              
             <div className = "product-container">
-                {isClicked ? render(): loaded()}
+                {/* {isClicked ? render(): loaded()} */}
+                {props.products? (isClicked? render():loaded()): loading()}
             </div>
                
         </main>

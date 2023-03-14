@@ -11,23 +11,11 @@
 
 body{
 background-color:#ffffff;
-
 }
-
-.home, .reports, .products{
-  display: flex; 
-  height: 90vh; 
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
-
 
 .App {
- 
   text-align: center;
 }
-
 
 header {
   background-color:#ffffff;
@@ -39,18 +27,9 @@ header {
   margin-top: 50px;
   
 }
+
 main{
   margin-bottom: 150px;
-}
-
-.bottom-margin{
-  margin-bottom:600px;
-}
-.title{
-  font-size: 35px;
-  color:black;
-  font-family: 'Overpass';
-  margin: 0px;
 }
 
 .product-page{
@@ -66,10 +45,16 @@ main{
   margin-top: 20px;
   width: 1000px;
 }
+.product-img {
+  width: 300px;
+  height: 300px;
+  border: 20px solid #ffffff;
+  box-shadow:rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
 .show-container{
   display: flex;
   justify-content: center;
-
 }
 .add-container{
   display: flex;
@@ -84,7 +69,6 @@ main{
   display: flex;
   justify-content: center;
   gap: 30px;
-
 }
 
 .edit-content{
@@ -103,7 +87,11 @@ main{
   padding: 30px;
 }
 
-.button{
+.bottom-margin{
+  margin-bottom:600px;
+}
+
+.button, .button:focus{
   
   border: 1px solid lightgrey;
   background-color: #ffffff;
@@ -126,12 +114,7 @@ main{
   width: 500px;
   text-align: left;
 }
-.product-img {
-  width: 300px;
-  height: 300px;
-  border: 20px solid #ffffff;
-  box-shadow:rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
+
 .show-image{
   width: 400px;
 }
@@ -163,6 +146,13 @@ align-items: flex-end;
   width: 100vw;
   padding-bottom: 150px;
 }
+
+.title{
+  font-size: 35px;
+  color:black;
+  font-family: 'Overpass';
+  margin: 0px;
+}
 .description{
   width: 500px;
   text-align: left;
@@ -185,7 +175,6 @@ align-items: flex-end;
 /* Landing Page */
 
 .title-text{
-  /* margin-top: 5rem; */
   font-size: 10em;
   overflow: hidden;
   margin-left: 115px;
@@ -195,7 +184,6 @@ align-items: flex-end;
   top: 300px;
   right: 100px;
 }
-
 .letter{
   display: inline-block;
   line-height: 2em;
@@ -240,4 +228,14 @@ align-items: flex-end;
 @keyframes animatebottom { 
   from{ bottom:-100px; opacity:0 } 
   to{ bottom:0; opacity:1 }
+}
+/* Mobile responsive */
+@media screen and (max-width: 600px) {
+  .title-text{
+    font-size: 30px;
+    top: 200px;
+    right: 50px;
+    position: absolute;
+  }
+
 }
