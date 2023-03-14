@@ -53,6 +53,7 @@ main{
 }
 
 .show-container{
+  margin-top:100px;
   display: flex;
   justify-content: center;
 }
@@ -119,6 +120,7 @@ main{
 
 .show-image{
   width: 400px;
+  height: 100%;
   border: 20px solid white;
   box-shadow:rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -126,12 +128,17 @@ main{
   margin: 30px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  align-items: center;
+  gap: 10px;
 
+}
+#buy-button{
+  background-color: black;
 }
 a, a:visited, a:link{
   text-decoration: none;
-  color: black
+  color: white;
+  padding-top: 15px;
 }
 
 button{
@@ -160,18 +167,19 @@ align-items: flex-end;
   margin: 0px;
 }
 .description{
-  width: 500px;
+  width: 550px;
   text-align: left;
   margin-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid lightgrey;
 }
 .resource-text{
-  width: 500px;
+  width: 550px;
   text-align: left;
 }
 #resource-img{
   width: 550px;
+  height: auto;
   border: 20px solid white;
   box-shadow:rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -214,6 +222,7 @@ align-items: flex-end;
 
 .home-text{
   display:flex;
+  align-items: center;
 }
 /* text animation */
 .animate {

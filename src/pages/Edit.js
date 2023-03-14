@@ -76,6 +76,14 @@ function Edit(props){
                     onChange = {handleChange}
                 />
                  </div>
+                 <textarea
+                    id="textarea1" class="materialize-textarea"
+                    type="text"
+                    value={editForm.description}
+                    name="description"
+                    placeholder="description"
+                    onChange={handleChange}
+                />
                  
                 <div>
                     <input id="add-button" className='input button' type="submit" value="Update" />

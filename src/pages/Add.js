@@ -75,6 +75,14 @@ const handleSubmit = (event) => {
                     placeholder='name'
                     onChange = {handleChange}
                 />
+                 <textarea
+                    id="textarea1" class="materialize-textarea"
+                    type="text"
+                    value={newProduct.description}
+                    name="description"
+                    placeholder="description"
+                    onChange={handleChange}
+                />
                 </div>
                 
                 <input className='input button' type="submit" value="Add" />

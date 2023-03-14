@@ -1,6 +1,6 @@
 # Mochi's Mittens
 
-This app introduces modern cat products
+Are you tired of cat's toys and furnitures ruining the aesthetic home interior? Mochi's Mitten suggests beautiful objects to your home and cats! 
 
 ## Trello
 ![](public/img/trello.png)
@@ -27,10 +27,15 @@ This app introduces modern cat products
 * Full CRUD
 
 
-### Extra Featires
+### Extra Features
 * Third-party API 
 * Animation on landing page 
 
 ## Live Link
 
 [https://mochis-mittens.netlify.app/](https://mochis-mittens.netlify.app/)
+
+## Future Enhancement 
+
+* Firebase Hosting
+

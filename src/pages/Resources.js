@@ -53,6 +53,7 @@ export const Resources = () => {
    const display = () =>{
     return (
       <dv>
+        <img id= 'resource-img'src={breed.url} alt={breed.name}></img>
         <p className='description'>{breed.breeds[0].description}</p>
         <table>
           <tbody>
@@ -96,7 +97,6 @@ export const Resources = () => {
           <button className='button' onClick = {handleSearch} >Search</button>
         </form>
         <div>
-          <img className= 'show-image resource-img'src={breed.url} alt={breed.name}></img>
           {breed ? display() : <img id='resource-img'src='/img/resource.png' alt='pic'/>}
         </div>
       </main>

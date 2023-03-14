@@ -12,8 +12,8 @@ function Show (props){
         <img className = "show-image" src={product.img} alt={product.name} /><br/>
         <div className ="show-detail">
             <h5>{product.name}</h5>
-            <p>Go to the shop</p>
-            <a href = {product.link} target = "_blank" rel="noreferrer">Buy here</a><br/>
+            <p className='description'>{product.description}</p>
+            <a id='buy-button'className='button' href = {product.link} target = "_blank" rel="noreferrer">BUY</a>
             <Link to={`/products/${product.id}/edit`}><button id="edit-button" className="input button">Edit</button></Link>
         </div>
       </div>
