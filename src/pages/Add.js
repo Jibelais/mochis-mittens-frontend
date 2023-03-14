@@ -32,7 +32,7 @@ const handleSubmit = (event) => {
 }
     
     return (  
-        <section className='add-container bottom-margin'>
+        <section className='add-container'>
             <img src='/img/add.png' alt='lazy mochi'></img>
             <form className='form-container'onSubmit = {handleSubmit}>
                 <div>

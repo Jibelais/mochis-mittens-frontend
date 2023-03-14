@@ -81,7 +81,7 @@ export const Resources = () => {
   return (
 
     <section className='resource-container'>
-      <main className='add-container bottom-margin border'>
+      <main className='add-container border'>
           <p className='resource-text'>Every cat has different personality and physical traits.  Knowing your cat defintely helps you to choose
           right products.  Search any breed you are curious about! 
           </p>
@@ -96,7 +96,7 @@ export const Resources = () => {
           <button className='button' onClick = {handleSearch} >Search</button>
         </form>
         <div>
-          <img className= 'show-image'src={breed.url} alt={breed.name}></img>
+          <img className= 'show-image resource-img'src={breed.url} alt={breed.name}></img>
           {breed ? display() : <img id='resource-img'src='/img/resource.png' alt='pic'/>}
         </div>
       </main>

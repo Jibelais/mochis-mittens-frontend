@@ -1,4 +1,5 @@
 import React from 'react'
+import{Link} from 'react-router-dom'
 import  { useRef, useEffect } from "react"
 import anime from "animejs";
 
@@ -32,14 +33,9 @@ const titleRef = useRef(null);
             <span className="letter dot">...</span>
         </h1>
         <div className='animate'>
-            <p>Hi I am Mochi, check out my picks!</p>         
+            <p className='home-text'>Hi I am Mochi, check out my collection!<Link to={`/products`}><img className='paws blink'src='/img/paws.png'></img> </Link></p>
+            
         </div>
-
-        {/* <div className='fav-container'>
-            <p>THE FAVORITES</p>
-        </div> */}
-
-
     </main>
     
   )

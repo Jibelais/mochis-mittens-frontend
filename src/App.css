@@ -62,6 +62,7 @@ main{
   align-items: center;
   gap: 30px;
   margin-top: 50px;
+  margin-bottom: 300px
 }
 
 .edit-container{
@@ -81,6 +82,7 @@ main{
 .resource-container{
   display:flex;
   justify-content: center;
+  margin-bottom: 200px;
 }
 .border{
   width: 900px;
@@ -117,6 +119,8 @@ main{
 
 .show-image{
   width: 400px;
+  border: 20px solid white;
+  box-shadow:rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .show-detail{
   margin: 30px;
@@ -144,9 +148,11 @@ align-items: flex-end;
 }
 .home-image{
   width: 100vw;
-  padding-bottom: 150px;
+  padding-bottom: 200px;
 }
-
+.paws{
+  width: 80px;
+}
 .title{
   font-size: 35px;
   color:black;
@@ -206,15 +212,19 @@ align-items: flex-end;
   text-align: left;
 }
 
+.home-text{
+  display:flex;
+}
 /* text animation */
 .animate {
+
   font-family: "Overpass";
   text-align: left;
   position: absolute;
   line-height: 30px;
   font-size: 20px;
   top: 500px;
-  right: 300px;
+  right:150px;
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
   animation-name: animatebottom;
@@ -238,4 +248,19 @@ align-items: flex-end;
     position: absolute;
   }
 
+}
+
+/* blinking effect */
+
+.blink{
+  /* visibility: hidden;
+  height:10px; */
+  animation: blinker 1.5s infinite ;
+}
+  
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
