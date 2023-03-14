@@ -1,14 +1,13 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import * as GiIcons from 'react-icons/gi'
 
 export const Resources = () => {
     const [cats, setCats] = useState([])
-    const [catID, setCatID] = useState([])
     const [breed, setBreed] = useState('')
     const [form, setForm] = useState("");
 
     const API_URL = 'https://api.thecatapi.com/v1'
-    const API_KEY = process.env.API_KEY
 
     const getBreed =async() =>{
         const res = await fetch(`${API_URL}/breeds`)
@@ -19,6 +18,7 @@ export const Resources = () => {
 
     useEffect(() => {
       getBreed()
+     
     }, [])
    
  
@@ -32,9 +32,9 @@ export const Resources = () => {
         return cat.name.toLowerCase().includes(form.toLowerCase())
     })
     setForm('')
-    setCatID(selection[0].reference_image_id)
+    getCatImage(selection[0].reference_image_id)
     };
-    console.log(catID)
+
    
     const getCatImage = async (breed_id)=>{
           const res = await fetch(`${API_URL}/images/${breed_id}`)
@@ -42,22 +42,47 @@ export const Resources = () => {
               console.log(data)
               setBreed(data)
           }
-    getCatImage(catID)
    
+   const iconGenerate = (num) =>{
+    const icons = []
+    for (let i = 0; i<breed.breeds[0].affection_level; i++){
+      icons.push(<i key={i}><GiIcons.GiPlainCircle/></i>)
+    }
+    return icons
+   }
+   const display = () =>{
+    return (
+      <div>
+         <h5>{breed.breeds[0].name}</h5>
+         <p>{breed.breeds[0].description}</p>
+         <label>Affection Level:</label>
+         <p className='rating'>{iconGenerate(breed.breeds[0].affection_level)}</p>
+         <p>{breed.breeds[0].shedding_leve}</p>
+         <p>{breed.breeds[0].child_friendly}</p>
+         
+
+     </div>
+      )    
+    }
   return (
-    <main>
+    <main className='add-container bottom-margin'>
         
-       <form onSubmit={handleSearch}>
+       <form className='form-container'onSubmit={handleSearch}>
         <input
           type="text"
           placeholder="Enter any cat breed"
           value={form}
           onChange={handleChange}
         />
-        <input type="submit"/>
+        <button className='button' onClick = {handleSearch} >Search</button>
       </form>
 
-      <img src={breed.url} alt={breed.name}></img>
+      <div>
+        <img className= 'show-image'src={breed.url} alt={breed.name}></img>
+        {breed ? display() : " "}
+      </div>
+      
+
     </main>
    
   )

@@ -5,7 +5,7 @@ function Header () {
     return (
     <header> 
         <Link to={'/'}>
-         <h1 className='title'>Mochi's Mittens</h1>
+         <h1 className='title'>MOCHI'S MITTENS</h1>
         </Link>
         <Navbar />
     </header>

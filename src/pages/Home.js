@@ -36,7 +36,7 @@ const titleRef = useRef(null);
         </div>
 
         {/* <div className='fav-container'>
-            <p>Mochi's favorites</p>
+            <p>THE FAVORITES</p>
         </div> */}
 
 

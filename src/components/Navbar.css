@@ -27,13 +27,13 @@
 .nav-menu{
     background-color: #ffffff;
     width: 200px;
-    height: 200px;
+    height: 250px;
     display: flex;
     justify-content: center;
     position:fixed;
     top: 30px; 
     right: 100%;
-    border: 1px solid black;
+    border: 1px solid lightgrey;
 
 
 
@@ -50,7 +50,7 @@
     align-items: center;
     padding: 8px 0px 8px 16px; 
     list-style: none;
-    height: 30px;
+    height: 40px;
 }
 
 .nav-text a{
