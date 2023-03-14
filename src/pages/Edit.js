@@ -30,7 +30,7 @@ function Edit(props){
     }
 
     return(
-        <section>
+        <section className='bottom-margin'>
             <form  className = 'product-container'onSubmit = {handleSubmit}>
                 <div>
                     <img className = 'show-image'src={product.img} alt={product.name} /><br/>
@@ -84,7 +84,6 @@ function Edit(props){
                 </div>
                 
             </form>
-            <img id="background-img" src='/img/bottem.png' alt="background" /><br/>
         </section>
         
     )

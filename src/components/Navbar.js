@@ -13,9 +13,9 @@ function Navbar() {
     const showSidebar = () => setSidebar(!sidebar)
   return (
     <div className = 'nav'>
-        <IconContext.Provider value={{color:'#fff'}} >
+        <IconContext.Provider value={{color:'black'}} >
         <div className = "navbar"> 
-            <Link to= "#" className = 'menu-bars'>
+            <Link to= "#" className = 'menu-bars' id='icon'>
                 <FaIcons.FaBars onClick = {showSidebar}/>
             </Link>
         </div>
@@ -30,8 +30,7 @@ function Navbar() {
                     return (
                         <li key = {idx} className={item.className}>
                             <Link to = {item.path}>
-                                {item.icon}
-                                <span>{item.title}</span>
+                                {item.icon}<span>{item.title}</span>
                             </Link>   
                         </li>
                     )

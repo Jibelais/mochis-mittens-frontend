@@ -7,7 +7,7 @@ function Products(props){
 
     const handleClick = (category) =>{
         let selection = props.products.filter((product) => {
-            return (product.category  === category)
+            return product.category.toLowerCase().includes(category.toLowerCase())
         })
         setSelected(selection)
         setIsClicked(true)
@@ -22,7 +22,7 @@ function Products(props){
             <div key = {product.id}>
                 <Link to={`/products/${product.id}`}>
                 <div>
-                    <img src={product.img} alt="img"/>
+                    <img className='product-img'src={product.img} alt="img"/>
                     {/* <p>{product.name}</p> */}
                 </div>
                 </Link>   
@@ -37,7 +37,7 @@ function Products(props){
             <Link to={`/products/${product.id}`}>
               <div className= "product" >
                 <div>
-                    <img src={product.img} alt="img"/>
+                    <img className='product-img'src={product.img} alt="img"/>
                     {/* <p>{product.name}</p> */}
                 </div>   
               </div>
@@ -51,23 +51,25 @@ function Products(props){
       }
 
     return (
-        <main>
-             <button className= 'category-button' onClick = {()=>handleClick("tower")} >Cat Towers</button>
-             <button className= 'category-button' onClick = {()=>handleClick("clothing")} >Clothings</button>
-             <button className= 'category-button' onClick = {()=>handleClick("toy")} >Toys</button>
-             <button className= 'category-button' onClick = {()=>handleClick("litter")} >Litter Boxes</button>
-             <button className= 'category-button' onClick = {()=>handleClick("accessories")} >Accessories</button>
-             <button className= 'category-button' onClick = {()=>handleClick("bed")} >Beds</button>
-             <button className= 'category-button' onClick = {displayAll} >ALL</button>
-        
-            {/* <div className = "product-container" >
-                {props.products ? loaded() : loading()}
-            </div> */}
+    <section className='product-page'>
+         <main>
+            <div>
+                <button className= 'category-button' onClick = {()=>handleClick("tower")} >Cat Towers</button>
+                <button className= 'category-button' onClick = {()=>handleClick("clothing")} >Clothings</button>
+                <button className= 'category-button' onClick = {()=>handleClick("toy")} >Toys</button>
+                <button className= 'category-button' onClick = {()=>handleClick("litter")} >Litter Boxes</button>
+                <button className= 'category-button' onClick = {()=>handleClick("accessories")} >Accessories</button>
+                <button className= 'category-button' onClick = {()=>handleClick("bed")} >Beds</button>
+                <button className= 'category-button' onClick = {displayAll} >ALL</button>
+            </div>
+             
             <div className = "product-container">
                 {isClicked ? render(): loaded()}
             </div>
                
         </main>
+    </section>
+       
         
     )
 }

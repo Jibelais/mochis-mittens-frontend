@@ -8,16 +8,14 @@ function Show (props){
 
     return(
         
-      <div className = 'product-container'>
+      <div className = 'show-container bottom-margin'>
         <img className = "show-image" src={product.img} alt={product.name} /><br/>
         <div className ="show-detail">
-            <h2>{product.name}</h2>
-            <p><span id="click">Click the links </span><br/> to buy</p>
+            <h5>{product.name}</h5>
+            <p>Go to the shop</p>
             <a href = {product.link} target = "_blank" rel="noreferrer">Buy here</a><br/>
             <Link to={`/products/${product.id}/edit`}><button id="edit-button" className="input button">Edit</button></Link>
         </div>
-        
-        <img id="background-img" src='/img/bottem.png' alt="background" /><br/>
       </div>
     )
 }

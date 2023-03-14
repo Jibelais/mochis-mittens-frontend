@@ -3,7 +3,7 @@ import  { useRef, useEffect } from "react"
 import anime from "animejs";
 
 
-export const Home = () => {
+export const Home = (props) => {
     
 const titleRef = useRef(null);
 
@@ -22,7 +22,7 @@ const titleRef = useRef(null);
   }, []);
 
   return (
-    <div>
+    <main className='bottom-margin'>
         <img className='home-image'src='/img/home.png'></img>
         <h1 ref={titleRef} className="title-text">
             <span className="letter m">m</span>
@@ -31,13 +31,16 @@ const titleRef = useRef(null);
             <span className="letter w">w</span>
             <span className="letter dot">...</span>
         </h1>
-
         <div className='animate'>
-            <p>Hi I am Mochi, check out my picks!</p>
-            {/* <p>I am very picky like my mommy.</p> */}
-            
+            <p>Hi I am Mochi, check out my picks!</p>         
         </div>
-    </div>
+
+        {/* <div className='fav-container'>
+            <p>Mochi's favorites</p>
+        </div> */}
+
+
+    </main>
     
   )
 }

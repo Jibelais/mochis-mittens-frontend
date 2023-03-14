@@ -4,9 +4,10 @@ import Navbar from "./Navbar"
 function Header () {
     return (
     <header> 
+        <Link to={'/'}>
+         <h1 className='title'>Mochi's Mittens</h1>
+        </Link>
         <Navbar />
-        <h1 className='title'>MOCHI'S MITTENS</h1>
-       
     </header>
     
     )

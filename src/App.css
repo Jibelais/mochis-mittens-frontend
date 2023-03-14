@@ -7,6 +7,12 @@
   padding: 0;
 
 }
+
+body{
+background-color:#ffffff;
+
+}
+
 .home, .reports, .products{
   display: flex; 
   height: 90vh; 
@@ -15,33 +21,41 @@
   font-size: 3rem;
 }
 
-body{
-  background-color: rgb(255, 255, 255);
-}
 
 .App {
-  /* background-color: white; */
+ 
   text-align: center;
 }
 
 
 header {
-  background-color: #fdfdfd ;
+  background-color:#ffffff;
   width: 100vw;
   height: 10vh;
-  gap: 30%;
-  margin: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
   
 }
-
 main{
+  margin-bottom: 150px;
+}
 
+.bottom-margin{
+  margin-bottom:700px;
 }
 .title{
   font-size: 40px;
   color:black;
-  font-family: 'Overpass'
-  /* font-family: 'Amatic SC', cursive; */
+  font-family: 'Overpass';
+  margin: 0px;
+}
+
+.product-page{
+  display: flex;
+  justify-content: center;
+
 }
 .product-container{
   font-family: 'Jost', sans-serif;
@@ -49,11 +63,15 @@ main{
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 50px;
+  margin-top: 20px;
+  width: 1000px;
   
 }
+.show-container{
+  display: flex;
+  justify-content: center;
 
-
+}
 nav, nav>a, nav>a:link, nav>a:visited{
   margin: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -61,8 +79,8 @@ nav, nav>a, nav>a:link, nav>a:visited{
   display: flex;
   justify-content: center;
   gap: 130px;
-  color: white;
-}
+  /* color: white;*/
+} 
 .input{
   padding: 10px;
   margin: 10px;
@@ -73,26 +91,29 @@ nav, nav>a, nav>a:link, nav>a:visited{
 .button{
   /* margin-left: 160px; */
   border: 1px solid lightgrey;
-  background-color: white;
+  background-color: #ffffff;
   color: grey;
   height: 50px;
   width: 100px;
  }
  .category-button{
-  background-color: white;
+  background-color:#ffffff;
   color: grey;
   height: 50px;
- 
   text-transform: uppercase;
+ }
+ .category-button:focus{
+  background-color: white !important;
  }
  label{
   display: inline-block;
   width: 150px;
   text-align: right;
 }
-img {
-  width: 250px;
-  border: 20px solid white;
+.product-img {
+  width: 300px;
+  height: 300px;
+  border: 20px solid #ffffff;
   box-shadow:rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .show-image{
@@ -106,20 +127,13 @@ img {
 
 }
 
-#background-img{
-  border:none;
-  width: 60vh;
-  position: fixed;
-  bottom: 0px;
-}
-
 a, a:visited, a:link{
   text-decoration: none;
   color: black
 }
 
 button{
-  background-color: #f0bead;
+
   color: white;
   border: 0;
   margin: 10px;
@@ -158,6 +172,16 @@ button{
   font-size: 0.5em;
 }
 
+.page-footer{
+  background-color: black;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  margin-top: -200px;
+  clear:both;
+  text-align: left;
+}
+
 /* text animation */
 .animate {
   font-family: "Overpass";
@@ -166,7 +190,7 @@ button{
   line-height: 30px;
   font-size: 20px;
   top: 500px;
-  right: 350px;
+  right: 300px;
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
   animation-name: animatebottom;

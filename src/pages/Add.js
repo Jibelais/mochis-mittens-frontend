@@ -32,7 +32,7 @@ const handleSubmit = (event) => {
 }
     
     return (  
-        <section>
+        <section className='add-container bottom-margin'>
             <form onSubmit = {handleSubmit}>
                 <div>
                     <input
@@ -78,7 +78,6 @@ const handleSubmit = (event) => {
                 
                 <input className='input button' type="submit" value="Add" />
             </form>
-            <img id="background-img" src='/img/bottem.png' alt="background" /><br/>
         </section>
     );
 }

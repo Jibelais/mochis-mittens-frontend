@@ -41,10 +41,10 @@ function Main(props){
     }, [])
 
     return(
-        <main className = 'main-content'>
+        <main >
             <Routes>
                 <Route exact path = '/' element = {<Home/>}/>
-                <Route exact path = '/resource' element = {<Resources/>}/>
+                <Route exact path = '/resources' element = {<Resources/>}/>
                 <Route exact path = '/products' element = {<Products products = {products}/>}/>
                 <Route exact path = '/products/:id' element = {<Show products = {products}/>}/>
                 <Route exact path = '/products/add' element = {<Add products = {products} createProduct = {createProduct}/>}/>

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 export const Resources = () => {
     const [cats, setCats] = useState([])
     const [catID, setCatID] = useState([])
-    const [catName, setCatName] = useState('')
+    const [breed, setBreed] = useState('')
     const [form, setForm] = useState("");
 
     const API_URL = 'https://api.thecatapi.com/v1'
@@ -29,7 +29,7 @@ export const Resources = () => {
     const handleSearch = (event) => {
       event.preventDefault();
       let selection = cats.filter((cat) => {
-        return (cat.name  === form)
+        return cat.name.toLowerCase().includes(form.toLowerCase())
     })
     setForm('')
     setCatID(selection[0].reference_image_id)
@@ -40,19 +40,26 @@ export const Resources = () => {
           const res = await fetch(`${API_URL}/images/${breed_id}`)
               const data = await res.json();
               console.log(data)
+              setBreed(data)
           }
     getCatImage(catID)
    
   return (
-    <form onSubmit={handleSearch}>
-    <input
-      type="text"
-      placeholder="Search..."
-      value={form}
-      onChange={handleChange}
-    />
-    <input type="submit"/>
-  </form>
+    <main>
+        
+       <form onSubmit={handleSearch}>
+        <input
+          type="text"
+          placeholder="Enter any cat breed"
+          value={form}
+          onChange={handleChange}
+        />
+        <input type="submit"/>
+      </form>
+
+      <img src={breed.url} alt={breed.name}></img>
+    </main>
+   
   )
 }
 
