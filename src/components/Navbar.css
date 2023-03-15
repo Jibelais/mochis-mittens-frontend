@@ -32,11 +32,9 @@
     display: flex;
     justify-content: center;
     position:relative;
-    top: 0px; 
-    right: 0%;
+    top: 1px; 
+    right: 1%;
     border: 1px solid lightgrey;
-
-
 
 }
 
